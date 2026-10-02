@@ -1,0 +1,36 @@
+.estrellas {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.estrella {
+    font-size: 80px;
+    line-height: 1;
+    color: #d8cfbf;
+    -webkit-text-stroke: 3px #111;
+    opacity: 0;
+    animation: aparecer 0.6s forwards;
+}
+
+.estrella.ganada {
+    color: #e5cf3f;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.3) rotate(-30deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .estrella {
+        font-size: 56px;
+    }
+}

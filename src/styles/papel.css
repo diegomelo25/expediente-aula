@@ -1,0 +1,28 @@
+.papel {
+    background-color: var(--papel);
+    border: 2px solid #3a2b1f;
+    border-radius: 3px;
+    padding: 24px 28px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.papel h2 {
+    margin-top: 0;
+    font-family: var(--fuente-titulo);
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.girado-izq {
+    transform: rotate(-3deg);
+}
+
+.girado-der {
+    transform: rotate(2deg);
+}
+
+.papel-mano {
+    font-family: var(--fuente-mano);
+    font-size: 26px;
+    text-align: center;
+}

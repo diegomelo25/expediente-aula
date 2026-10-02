@@ -1,0 +1,89 @@
+.materias-contenido {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 30px 20px;
+}
+
+.grid-materias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.deslizar {
+    animation: deslizar 0.4s;
+}
+
+@keyframes deslizar {
+    from {
+        opacity: 0;
+        translate: 40px 0;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+.flecha {
+    background: none;
+    border: none;
+    color: #4b2d16;
+    font-size: 44px;
+    cursor: pointer;
+}
+
+.flecha:disabled {
+    visibility: hidden;
+}
+
+.puntos {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-bottom: 30px;
+}
+
+.punto {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #4b2d16;
+    border-radius: 50%;
+}
+
+.punto.activo {
+    background-color: #4b2d16;
+}
+
+@media (max-width: 600px) {
+    .materias-contenido {
+        padding: 30px 8px 20px;
+        gap: 6px;
+    }
+
+    .grid-materias {
+        gap: 30px 14px;
+    }
+
+    .carpeta-nombre {
+        font-size: 15px;
+        top: auto;
+        bottom: 12px;
+    }
+
+    .nota {
+        width: 60px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .flecha {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,83 @@
+.pregunta {
+    max-width: 680px;
+}
+
+.pregunta h2 {
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+.opcion {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 10px 12px;
+    text-align: left;
+    font-family: var(--fuente-texto);
+    font-size: 18px;
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.opcion:hover {
+    background-color: rgba(36, 90, 92, 0.08);
+}
+
+.opcion b {
+    font-family: var(--fuente-titulo);
+}
+
+.opcion.seleccionada {
+    border-color: var(--verde);
+    background-color: rgba(36, 90, 92, 0.12);
+}
+
+.opcion.correcta {
+    border-color: #2e6a3a;
+    background-color: rgba(46, 106, 58, 0.18);
+}
+
+.opcion.incorrecta {
+    border-color: #9b2b22;
+    background-color: rgba(155, 43, 34, 0.1);
+    color: #7a6b5c;
+}
+
+.opcion:disabled {
+    cursor: default;
+}
+
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mensaje {
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-left: 5px solid var(--verde);
+    background-color: rgba(36, 90, 92, 0.08);
+    font-size: 16px;
+}
+
+.mensaje.bien {
+    border-color: #2e6a3a;
+    background-color: rgba(46, 106, 58, 0.12);
+}
+
+.mensaje.mal {
+    border-color: #9b2b22;
+    background-color: rgba(155, 43, 34, 0.08);
+}
+
+.mensaje strong {
+    display: block;
+    margin-bottom: 4px;
+    font-family: var(--fuente-titulo);
+}

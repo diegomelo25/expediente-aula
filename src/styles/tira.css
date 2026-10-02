@@ -1,0 +1,54 @@
+.pantalla {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.tira {
+    position: relative;
+    margin-top: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 120px;
+    padding: 24px 220px 24px 40px;
+    background-color: var(--papel);
+    border-top: 2px solid #3a2b1f;
+    border-left: 2px solid #3a2b1f;
+    box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+}
+
+.tira-texto {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.tira-tomas {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 190px;
+    object-fit: cover;
+    object-position: top;
+    background-color: #4b2a12;
+    border-top-left-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    .tira {
+        padding: 16px 120px 16px 16px;
+    }
+
+    .tira-texto {
+        font-size: 16px;
+    }
+
+    .tira-tomas {
+        width: 110px;
+        height: 105px;
+    }
+}

@@ -1,0 +1,19 @@
+:root {
+  --madera: #663519;
+  --madera-oscura: #3e1f0e;
+  --papel: #f4ecdf;
+  --arena: #dcc4a3;
+  --tinta: #1d1611;
+  --verde: #245a5c;
+  --verde-claro: #2f7375;
+  --verde-oscuro: #173d3e;
+  --gris: #a49a8c;
+  --carton: #a8835a;
+  --carton-borde: #5c4128;
+  --nota: #f3ead8;
+
+  --fuente-titulo: "League Spartan", Arial, sans-serif;
+  --fuente-texto: "Josefin Sans", Arial, sans-serif;
+  --fuente-maquina: "Courier Prime", "Courier New", monospace;
+  --fuente-mano: "Caveat", cursive;
+}

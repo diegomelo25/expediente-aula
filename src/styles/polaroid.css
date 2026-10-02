@@ -1,0 +1,38 @@
+.polaroid {
+    display: inline-block;
+    width: 160px;
+    padding: 10px 10px 34px;
+    background-color: #fbfaf6;
+    border: 1px solid #cfc8bb;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.polaroid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: #ddd;
+    filter: grayscale(1);
+}
+
+.polaroid p {
+    margin: 8px 0 0;
+    text-align: center;
+    font-family: var(--fuente-mano);
+    font-size: 20px;
+}
+
+.nota-gabriel {
+    position: relative;
+    max-width: 380px;
+    padding-bottom: 90px;
+}
+
+.nota-gabriel .polaroid {
+    position: absolute;
+    right: -40px;
+    bottom: -35px;
+    width: 120px;
+    transform: rotate(8deg);
+}

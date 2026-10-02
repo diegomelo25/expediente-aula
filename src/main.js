@@ -1,0 +1,24 @@
+import { registrarPantalla, irA } from './herramientas/navegacion.js';
+import { pantallaTitulo } from './pantallas/titulo.js';
+import { pantallaIntro } from './pantallas/intro.js';
+import { pantallaMaterias } from './pantallas/materias.js';
+import { pantallaCasos } from './pantallas/casos.js';
+import { pantallaPortada } from './pantallas/portada.js';
+import { pantallaArchivo } from './pantallas/archivo.js';
+import { pantallaReto1 } from './pantallas/reto1.js';
+import { pantallaReto2 } from './pantallas/reto2.js';
+import { pantallaReto3 } from './pantallas/reto3.js';
+import { pantallaResultados } from './pantallas/resultados.js';
+
+registrarPantalla('titulo', pantallaTitulo);
+registrarPantalla('intro', pantallaIntro);
+registrarPantalla('materias', pantallaMaterias);
+registrarPantalla('casos', pantallaCasos);
+registrarPantalla('portada', pantallaPortada);
+registrarPantalla('archivo', pantallaArchivo);
+registrarPantalla('reto1', pantallaReto1);
+registrarPantalla('reto2', pantallaReto2);
+registrarPantalla('reto3', pantallaReto3);
+registrarPantalla('resultados', pantallaResultados);
+
+irA('titulo');
