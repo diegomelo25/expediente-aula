@@ -5,8 +5,12 @@ let elementoActual = null;
 let textoActual = '';
 let alTerminarActual = null;
 
-export function escribirTexto(elemento, texto, velocidad = 30, alTerminar = null) {
+export function escribirTexto(elemento, texto, velocidad = null, alTerminar = null) {
     clearInterval(intervaloActual);
+
+    if (velocidad === null) {
+        velocidad = Number(localStorage.getItem('velocidadTexto') ?? 30);
+    }
 
     elementoActual = elemento;
     textoActual = texto;

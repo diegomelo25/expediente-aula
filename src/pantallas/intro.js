@@ -40,7 +40,7 @@ export function pantallaIntro(app) {
 
         const frase = actual.texto.replace('{nombre}', nombre);
 
-        escribirTexto(texto, frase, 30, function () {
+        escribirTexto(texto, frase, null, function () {
             abajo.style.visibility = 'visible';
 
             if (linea === lineasIntro.length - 1) {

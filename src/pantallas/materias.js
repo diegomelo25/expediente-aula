@@ -3,7 +3,7 @@ import { crearBarra } from '../componentes/barra.js';
 import { crearCarpeta } from '../componentes/carpeta.js';
 import { mostrarAviso } from '../componentes/avisos.js';
 import { sonar } from '../herramientas/sonido.js';
-import { irA, volver } from '../herramientas/navegacion.js';
+import { irA, irAlInicio } from '../herramientas/navegacion.js';
 
 const porPagina = 4;
 
@@ -93,7 +93,7 @@ export function pantallaMaterias(app) {
 
     app.querySelector('#volver').addEventListener('click', function () {
         sonar('clic');
-        volver();
+        irAlInicio();
     });
 
     dibujarPagina();

@@ -1,6 +1,8 @@
 .escena {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 480px;
     overflow: hidden;
     background-color: #2b170c;
     background-image: url("/img/fondos/oficina.png");
@@ -11,8 +13,8 @@
 .escena-tomas {
     position: absolute;
     bottom: 0;
-    left: 6%;
-    height: 85vh;
+    left: 12%;
+    height: 94%;
     animation: entrar-izquierda 0.8s;
 }
 
@@ -30,19 +32,24 @@
 
 .escena-caja {
     position: absolute;
-    right: 6%;
-    bottom: 28vh;
-    width: 22vw;
-    max-width: 340px;
+    right: 3%;
+    bottom: 22%;
+    width: 24vw;
+    max-width: 420px;
+    z-index: 3;
+    animation: entrar 0.8s;
 }
 
 .dialogo {
     position: absolute;
     left: 5%;
-    right: 5%;
-    bottom: 30px;
-    min-height: 180px;
-    padding: 36px 40px 28px;
+    right: 6%;
+    bottom: 5%;
+    min-height: 25%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 3% 4%;
     cursor: pointer;
     z-index: 2;
 }
@@ -61,15 +68,16 @@
 }
 
 .dialogo-texto {
+    flex: 1;
+    max-width: 75%;
     margin: 0;
-    font-size: 22px;
-    line-height: 1.4;
+    font-size: clamp(16px, 1.6vw, 28px);
+    line-height: 1.3;
 }
 
 .dialogo-abajo {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 16px;
+    margin-left: auto;
+    align-self: flex-end;
 }
 
 .toca-seguir {
@@ -91,7 +99,7 @@
     position: absolute;
     top: 24px;
     right: 24px;
-    z-index: 3;
+    z-index: 4;
     padding: 8px 18px;
     border: none;
     border-radius: 20px;
@@ -106,8 +114,10 @@
 
 @media (max-width: 700px) {
     .escena-tomas {
-        height: 60vh;
-        left: -10%;
+        left: 50%;
+        height: 75%;
+        bottom: 20%;
+        transform: translateX(-50%);
     }
 
     .escena-caja {
@@ -118,10 +128,15 @@
         left: 12px;
         right: 12px;
         bottom: 12px;
+        min-height: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
         padding: 28px 20px 20px;
     }
 
     .dialogo-texto {
+        max-width: none;
         font-size: 17px;
     }
 }

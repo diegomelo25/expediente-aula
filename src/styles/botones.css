@@ -41,3 +41,12 @@
     padding: 8px 22px;
     font-size: 16px;
 }
+
+.btn-peligro {
+    background-color: #9b2b22;
+    box-shadow: 0 5px 0 #5e1813;
+}
+
+.btn-peligro:hover {
+    background-color: #b3362c;
+}

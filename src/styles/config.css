@@ -1,0 +1,89 @@
+.config {
+    max-width: 900px;
+    width: calc(100% - 32px);
+    margin: 60px auto 40px;
+    padding: 40px 70px;
+    transform: rotate(-0.5deg);
+    animation: entrar 0.5s;
+}
+
+.config h2 {
+    margin: 0 0 10px;
+    font-family: var(--fuente-maquina);
+    font-size: 56px;
+    text-align: center;
+}
+
+.config h3 {
+    margin: 24px 0 10px;
+    font-family: var(--fuente-titulo);
+    font-size: 26px;
+    text-align: center;
+}
+
+.opcion-config {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.opcion-config input[type="range"] {
+    width: 100%;
+    accent-color: var(--verde);
+    cursor: pointer;
+}
+
+.selector {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.selector button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.selector output {
+    min-width: 8em;
+    text-align: center;
+}
+
+.borrar {
+    display: block;
+    margin: 34px auto 0;
+    background: none;
+    border: none;
+    color: #9b2b22;
+    font-family: var(--fuente-texto);
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .config {
+        padding: 24px 18px;
+        margin-top: 70px;
+    }
+
+    .config h2 {
+        font-size: 34px;
+    }
+
+    .opcion-config {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        font-size: 19px;
+    }
+
+    .selector {
+        justify-content: space-between;
+    }
+}

@@ -10,6 +10,10 @@ import { pantallaReto1 } from './pantallas/reto1.js';
 import { pantallaReto2 } from './pantallas/reto2.js';
 import { pantallaReto3 } from './pantallas/reto3.js';
 import { pantallaResultados } from './pantallas/resultados.js';
+import { pantallaRanking } from './pantallas/ranking.js';
+import { pantallaProgreso } from './pantallas/progreso.js';
+import { pantallaPausa } from './pantallas/pausa.js';
+import { pantallaConfig } from './pantallas/config.js';
 
 registrarPantalla('titulo', pantallaTitulo);
 registrarPantalla('intro', pantallaIntro);
@@ -22,5 +26,9 @@ registrarPantalla('reto1', pantallaReto1);
 registrarPantalla('reto2', pantallaReto2);
 registrarPantalla('reto3', pantallaReto3);
 registrarPantalla('resultados', pantallaResultados);
+registrarPantalla('ranking', pantallaRanking);
+registrarPantalla('progreso', pantallaProgreso);
+registrarPantalla('pausa', pantallaPausa);
+registrarPantalla('configuracion', pantallaConfig);
 
 irA('titulo');

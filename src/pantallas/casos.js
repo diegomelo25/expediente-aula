@@ -61,6 +61,6 @@ export function pantallaCasos(app, datos) {
 
     app.querySelector('#volver').addEventListener('click', function () {
         sonar('clic');
-        volver();
+        irA('materias');
     });
 }

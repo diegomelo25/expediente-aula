@@ -29,8 +29,17 @@ export function irA(nombre, datos = {}) {
 
 export function volver() {
     const anterior = historial.pop();
-    if (!anterior) return;
     pantallaActual = null;
-    irA(anterior.nombre, anterior.datos);
-    historial.pop();
+
+    if (anterior) {
+        irA(anterior.nombre, anterior.datos);
+    } else {
+        irA('titulo');
+    }
+}
+
+export function irAlInicio() {
+    historial.length = 0;
+    pantallaActual = null;
+    irA('titulo');
 }

@@ -3,7 +3,7 @@ import { crearPapel } from '../componentes/papel.js';
 import { crearPolaroid } from '../componentes/polaroid.js';
 import { crearTira } from '../componentes/tira.js';
 import { escribirTexto } from '../herramientas/escribir.js';
-import { iniciarCronometro } from '../herramientas/progreso.js';
+import { iniciarCronometro, siguienteReto, reiniciarCaso } from '../herramientas/progreso.js';
 import { sonar } from '../herramientas/sonido.js';
 import { irA, volver } from '../herramientas/navegacion.js';
 
@@ -78,6 +78,16 @@ export function pantallaPortada(app, datos) {
   });
 
   app.querySelector('#abrir').addEventListener('click', function () {
+    const nivelAnterior = localStorage.getItem('nivel-' + caso.id);
+    const yaTermino = siguienteReto(caso.id) === null;
+    const cambioNivel = nivelAnterior !== null && nivelAnterior !== nivelElegido;
+
+    if (yaTermino || cambioNivel) {
+      reiniciarCaso(caso.id);
+    }
+
+    localStorage.setItem('nivel-' + caso.id, nivelElegido);
+    localStorage.setItem('casoActual', caso.id);
     iniciarCronometro(caso.id);
     sonar('papel');
     app.querySelector('#carpeta').classList.add('abrir');

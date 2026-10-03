@@ -100,3 +100,52 @@ export function tiempoFinal(idCaso) {
     localStorage.setItem(claveTiempo, segundos);
     return segundos;
 }
+
+export function guardarEnRanking(idCaso, nombre, segundos) {
+    const guardado = localStorage.getItem('ranking');
+    const ranking = guardado ? JSON.parse(guardado) : {};
+
+    if (!ranking[idCaso]) {
+        ranking[idCaso] = [];
+    }
+
+    const existente = ranking[idCaso].find(function (jugador) {
+        return jugador.nombre === nombre;
+    });
+
+    if (existente) {
+        if (segundos < existente.segundos) {
+            existente.segundos = segundos;
+        }
+    } else {
+        ranking[idCaso].push({ nombre: nombre, segundos: segundos });
+    }
+
+    localStorage.setItem('ranking', JSON.stringify(ranking));
+}
+
+export function leerRanking(idCaso) {
+    const guardado = localStorage.getItem('ranking');
+    const ranking = guardado ? JSON.parse(guardado) : {};
+    return ranking[idCaso] || [];
+}
+
+export function descontarPausa(idCaso, segundosPausa) {
+    if (localStorage.getItem('tiempo-' + idCaso) !== null) return;
+
+    const clave = 'inicio-' + idCaso;
+    const inicio = Number(localStorage.getItem(clave));
+    if (!inicio) return;
+
+    localStorage.setItem(clave, inicio + segundosPausa * 1000);
+}
+
+export function reiniciarCaso(idCaso) {
+    const progreso = leerProgreso();
+    delete progreso.retos[idCaso];
+    delete progreso.conteo[idCaso];
+    guardarProgreso(progreso);
+
+    localStorage.removeItem('inicio-' + idCaso);
+    localStorage.removeItem('tiempo-' + idCaso);
+}

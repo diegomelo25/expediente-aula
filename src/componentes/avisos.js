@@ -53,3 +53,29 @@ export function pedirNombre(alTerminar) {
         cerrar('detective');
     });
 }
+
+export function confirmar(titulo, texto, textoBoton, alAceptar) {
+    const fondo = document.createElement('div');
+    fondo.className = 'fondo-oscuro';
+    fondo.innerHTML = `
+    <div class="papel ventana">
+      <h2>${titulo}</h2>
+      <p>${texto}</p>
+      <div class="ventana-botones">
+        <button class="btn btn-gris btn-pequeno" id="cancelar">Cancelar</button>
+        <button class="btn btn-pequeno btn-peligro" id="aceptar">${textoBoton}</button>
+      </div>
+    </div>
+  `;
+    document.body.appendChild(fondo);
+
+    fondo.querySelector('#cancelar').addEventListener('click', function () {
+        sonar('clic');
+        fondo.remove();
+    });
+
+    fondo.querySelector('#aceptar').addEventListener('click', function () {
+        fondo.remove();
+        alAceptar();
+    });
+}
