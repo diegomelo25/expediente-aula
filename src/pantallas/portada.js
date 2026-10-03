@@ -82,7 +82,7 @@ export function pantallaPortada(app, datos) {
     sonar('papel');
     app.querySelector('#carpeta').classList.add('abrir');
     setTimeout(function () {
-      irA('archivo', { caso: caso.id });
+      irA('microleccion', { caso: caso.id });
     }, 850);
   });
 

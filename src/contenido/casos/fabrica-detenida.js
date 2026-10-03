@@ -5,6 +5,27 @@ export const fabricaDetenida = {
     periodo: '1760 — 1840',
     notaGabriel: '“No busques solamente qué cambió. Descubre qué hizo que todo lo demás cambiara.”',
 
+    microleccion: {
+        titulo: 'La revolución industrial',
+        secciones: [
+            {
+                nombre: 'Contextualización',
+                texto: 'Entre 1760 y 1840, la Revolución Industrial transformó una economía basada en la agricultura y el trabajo manual en otra industrializada, urbana y mecanizada. Este proceso comenzó en el Reino Unido y se expandió gracias a una serie de innovaciones que cambiaron la forma de producir, transportarse y vivir.',
+                imagen: '/img/caso-1/micro-contexto.png'
+            },
+            {
+                nombre: 'Conceptos clave',
+                texto: 'Durante este periodo ocurrieron varios cambios importantes. La mecanización sustituyó parte del trabajo humano y animal por máquinas. El carbón mineral impulsó la máquina de vapor, permitiendo mover nueva maquinaria. Además, surgió el sistema fabril, que concentró trabajadores y máquinas en grandes fábricas. Todo esto aumentó la producción, transformó las ciudades y reorganizó la sociedad.',
+                imagen: '/img/caso-1/micro-conceptos.png'
+            },
+            {
+                nombre: 'Tu misión',
+                texto: 'Gabriel dejó estas imágenes porque quería mostrar que la Revolución Industrial no cambió solo la tecnología, sino también la vida de las personas. Tu misión es identificar qué hizo posible este cambio, cómo transformó el trabajo y qué consecuencias produjo en la sociedad. Si lo logras, podrás reconstruir una nueva pista del expediente.',
+                imagen: '/img/caso-1/micro-mision.png'
+            }
+        ]
+    },
+
     tomas: {
         portada: '“Esta vez tú vas a investigar. Yo te voy a ayudar solo si me lo pides.”',
         archivo: '“Hmm… Gabriel nunca dejaba información porque sí. Si puso estas imágenes aquí, seguramente esperaba que alguien encontrara la relación entre ellas.”',

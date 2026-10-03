@@ -26,10 +26,26 @@ body {
   background-size: cover;
 }
 
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-  }
+.oficina-borrosa {
+  position: relative;
+  overflow: hidden;
+}
+
+.oficina-borrosa::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  background-color: #2b170c;
+  background-image: url("/img/fondos/oficina.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px) brightness(0.75);
+  z-index: 0;
+}
+
+.oficina-borrosa>* {
+  position: relative;
+  z-index: 1;
 }
 
 .entrar {
@@ -45,5 +61,11 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
   }
 }
